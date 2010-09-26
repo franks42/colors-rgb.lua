@@ -1,0 +1,34 @@
+--[[  colors-rgb.lua - Color to RGB value table for Lua coding with Corona
+--
+-- Copyright (c) Frank Siebenlist. All rights reserved.
+-- The use and distribution terms for this software are covered by the
+-- Eclipse Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php).
+-- By using this software in any fashion, you are agreeing to be bound by
+-- the terms of this license.
+-- You must not remove this notice, or any other, from this software.
+--
+--
+Usage for Corona toolkit:
+add this file "colors-rgb.lua" to your working directory
+add following directive to any file that will use the colors by name:
+require "colors-rgb"
+
+If you need the RGB values for a function list, you can use "colorsRGB.RGB()", like
+colorsRGB.RGB("chocolate"), which returns the multi value list "210 105 30"
+This can be used for function parameter input, like for example b:setFillColor(r,g,b):
+body:setFillColor(colorsRGB.RGB("chocolate"))
+
+If you need the RGB values as a table, like "{210, 105, 30}" for the "chocolate" color, 
+use a lookup in the color name table "colorsRGB",
+like "colorsRGB.chocolate" or colorsRGB["chocolate"], which return "{210, 105, 30}"
+
+If you need the individual R,G,B values, you can use either explicit table lookup:
+colorsRGB.chocolate[1], colorsRGB.chocolate[2] and colorsRGB.chocolate[3],
+or convenience functions colorsRGB.R("chocolate"), colorsRGB.G("chocolate") and
+colorsRGB.B("chocolate"), for the R, G, B-values, respectively.
+
+Color values copied from "http://www.w3.org/TR/SVG/types.html#ColorKeywords"
+
+
+Enjoy, Frank (Sep 20, 2010)
+-----------------------------------------------------------------------------]]
